@@ -114,3 +114,16 @@ int yywrap()
 {
 return 1;
 }
+
+
+/*
+
+Steps to run the code 
+
+flex whileic.l
+bison whileic.y
+gcc -o t whileic.tab.c -ll -ly
+./t
+
+
+*/
