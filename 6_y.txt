@@ -34,3 +34,13 @@ int yywrap()
 {
 	return 1;
 }
+
+/*
+Steps to run this code
+
+lex calc.l
+yacc -d calc.y
+gcc y.tab.c lex.yy.c
+./a.out
+
+*/
