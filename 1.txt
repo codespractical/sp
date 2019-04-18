@@ -525,3 +525,31 @@ Enter source file name:src.txt
 526)   (DL,01)  (C, 1)
 527)   (DL,02)  (C,15)
 kara@kara-VirtualBox:~/Documents$ 
+
+
+Source File:
+
+	START 	510
+LOOP 	MOVER	AREG,A
+	MOVER 	AREG,='5'
+	MOVEM	AREG,A
+	BC        GT,NEXT
+	MOVER	CREG,B
+	ADD	CREG,='1'
+	MOVEM	CREG,B
+	SUB	CREG,='5'
+	LTORG	
+	ADD	CREG,B
+	BC	LE,LOOP
+NEXT	SUB	AREG,='1'
+	BC	LT,BACK
+	LTORG	
+	STOP	
+	ORIGIN	525
+	MULT	CREG,='1'
+A	DC	1
+BACK	EQU	LOOP
+B	DS	15
+	END
+	
+	*/
